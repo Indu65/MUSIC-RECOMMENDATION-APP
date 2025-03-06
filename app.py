@@ -112,20 +112,8 @@ lang = st.text_input("Enter your preferred language")
 artist = st.text_input("Enter your preferred artist")
 
 if lang and artist and st.session_state["run"] != "false":
-    webrtc_streamer(
-    key="key",
-    rtc_configuration={
-        "iceServers": [
-            {"urls": "stun:stun.l.google.com:19302"},  # Free Google STUN server
-            {
-                "urls": "turn:your-turn-server.com:3478",  # Replace with real TURN server
-                "username": "your_username",
-                "credential": "your_password"
-            }
-        ]
-    },
-    video_processor_factory=EmotionDetector
-)
+    webrtc_streamer(key="key", desired_playing_state=True,
+				video_processor_factory=EmotionDetector)
 
 # if lang and artist and st.session_state["run"] != "false":
 #     webrtc_streamer(key="key", desired_playing_state=True,
