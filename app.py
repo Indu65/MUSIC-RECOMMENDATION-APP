@@ -9,7 +9,7 @@ from keras.models import load_model
 import webbrowser
 
 # Get absolute path
-image_path = os.path.abspath("Images/logo.png")
+image_path = os.path.abspath("images/logo.png")
 
 col1, col2, col3 = st.columns([1, 6, 1])
 with col1:
