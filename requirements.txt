@@ -1,0 +1,9 @@
+opencv-python==4.5.5.64
+streamlit==0.89.0
+streamlit_webrtc==0.34.0
+mediapipe==0.10.5
+av==9.2.0
+keras>=2.10.0
+tensorflow>=2.10.0
+numpy==1.22.3
+dlib==19.24.0
