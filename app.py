@@ -15,7 +15,7 @@ with col1:
     st.write("")
 
 with col2:
-    st.image(".\Images\logo.png" , width=530, use_column_width=True)
+    st.image("./Images/logo.png" , width=530, use_column_width=True)
 
 with col3:
     st.write("")
