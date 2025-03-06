@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_webrtc import WebRtcMode, webrtc_streamer
+import streamlit_webrtc as webrtc
 import os
 import av
 import cv2
@@ -112,8 +112,15 @@ lang = st.text_input("Enter your preferred language")
 artist = st.text_input("Enter your preferred artist")
 
 if lang and artist and st.session_state["run"] != "false":
-    webrtc_streamer(key="key", desired_playing_state=True,
-				video_processor_factory=EmotionDetector)
+    webrtc_ctx = webrtc.webrtc_streamer(
+    key="example",
+    rtc_configuration={
+        "iceServers": [
+            {"urls": ["stun:stun.l.google.com:19302"]},  # Public STUN server
+            {"urls": ["turn:turn.example.com"], "username": "user", "credential": "pass"}  # Add if needed
+        ]
+    },
+)
 
 # if lang and artist and st.session_state["run"] != "false":
 #     webrtc_streamer(key="key", desired_playing_state=True,
