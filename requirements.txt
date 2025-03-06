@@ -8,3 +8,5 @@ keras>=2.10.0
 tensorflow>=2.10.0
 numpy==1.22.3
 dlib-bin
+aioice==0.7.6
+aiortc==1.4.0
