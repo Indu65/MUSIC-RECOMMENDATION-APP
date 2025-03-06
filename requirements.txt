@@ -1,12 +1,12 @@
+streamlit-webrtc==0.34.0
+aiortc==1.4.0
+aioice==0.7.6
 opencv-python==4.7.0.72
+av==9.2.0
 streamlit==0.89.0
-streamlit_webrtc==0.34.0
 altair==4.2.2
 mediapipe==0.10.5
-av==9.2.0
 keras>=2.10.0
 tensorflow>=2.10.0
 numpy==1.22.3
 dlib-bin
-aioice
-aiortc
