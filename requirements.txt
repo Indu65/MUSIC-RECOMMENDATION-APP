@@ -1,4 +1,4 @@
-opencv-python==4.5.5.64
+opencv-python==4.7.0.72
 streamlit==0.89.0
 streamlit_webrtc==0.34.0
 altair==4.2.2
