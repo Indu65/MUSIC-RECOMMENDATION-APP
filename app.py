@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer
-
+import os
 import av
 import cv2
 import numpy as np
@@ -8,15 +8,20 @@ import mediapipe as mp
 from keras.models import load_model
 import webbrowser
 
+# Get absolute path
+image_path = os.path.abspath("Images/logo.png")
 
-
-col1, col2, col3 = st.columns([1,6,1])
+col1, col2, col3 = st.columns([1, 6, 1])
 with col1:
     st.write("")
 
 with col2:
-    st.image("./Images/logo.png" , width=530, use_column_width=True)
-
+    if os.path.exists(image_path):  # Check if the image exists
+        st.image(image_path, width=530, use_column_width=True)
+    else:
+        st.error(f"⚠️ Image not found: {image_path}")
+        st.write("Please check if 'logo.png' is inside the 'Images' folder.")
+	    
 with col3:
     st.write("")
 
